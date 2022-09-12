@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="701.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerScreen">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Customers">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customersTableView" layoutX="14.0" layoutY="34.0" prefHeight="603.0" prefWidth="834.0">
+        <columns>
+          <TableColumn fx:id="customerIDCol" prefWidth="53.0" text="ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="125.0" text="Name" />
+            <TableColumn fx:id="customerAddressCol" prefWidth="260.0" text="Address" />
+            <TableColumn fx:id="customerPostalCodeCol" minWidth="0.0" prefWidth="77.0" text="Postal Code" />
+            <TableColumn fx:id="customerPhoneCol" prefWidth="94.0" text="Phone Number" />
+            <TableColumn fx:id="customerCountryCol" prefWidth="110.0" text="Country" />
+            <TableColumn fx:id="customerStateCol" prefWidth="114.0" text="State" />
+        </columns>
+      </TableView>
+      <HBox alignment="TOP_RIGHT" layoutX="409.0" layoutY="637.0" prefHeight="29.0" prefWidth="441.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#editCustomerClicked" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#removeCustomerClicked" text="Remove" />
+            <Button mnemonicParsing="false" onAction="#addCustomerClicked" text="Add" />
+         </children>
+      </HBox>
+      <Button layoutX="809.0" layoutY="666.0" mnemonicParsing="false" onAction="#backClicked" text="Back" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

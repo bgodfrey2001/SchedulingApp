@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="736.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentScreen">
+   <children>
+      <TableView fx:id="appointmentsTableView" layoutX="14.0" layoutY="38.0" prefHeight="603.0" prefWidth="924.0">
+        <columns>
+          <TableColumn fx:id="appointmentIDTableCol" prefWidth="109.0" text="Appointment ID" />
+          <TableColumn fx:id="titleTableCol" prefWidth="77.0" text="Title" />
+            <TableColumn fx:id="DescriptionTableCol" prefWidth="141.0" text="Description" />
+            <TableColumn fx:id="locationTableCol" prefWidth="58.0" text="Location" />
+            <TableColumn fx:id="contactTableCol" prefWidth="99.0" text="Contact" />
+            <TableColumn fx:id="typeTableCol" prefWidth="63.0" text="Type" />
+            <TableColumn fx:id="startTableCol" prefWidth="129.0" text="Start Date and Time" />
+            <TableColumn fx:id="endTableCol" prefWidth="118.0" text="End Date and Time" />
+            <TableColumn fx:id="customerIDTableCol" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="userIDTableCol" prefWidth="54.0" text="User ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" text="Appointments">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_RIGHT" layoutX="497.0" layoutY="642.0" prefHeight="25.0" prefWidth="441.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#editAppointmentClicked" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#removeAppointmentClicked" text="Remove" />
+            <Button mnemonicParsing="false" onAction="#addAppointmentClicked" text="Add" />
+         </children>
+      </HBox>
+      <Button layoutX="897.0" layoutY="667.0" mnemonicParsing="false" onAction="#backClicked" text="Back" />
+      <HBox layoutX="14.0" layoutY="643.0" prefHeight="25.0" prefWidth="429.0" spacing="20.0">
+         <children>
+            <RadioButton mnemonicParsing="false" onAction="#allAppointmentsSelected" selected="true" text="All Appointments">
+               <toggleGroup>
+                  <ToggleGroup fx:id="monthlyWeeklySelector" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#thisMonthSelected" text="This Month" toggleGroup="$monthlyWeeklySelector" />
+            <RadioButton mnemonicParsing="false" onAction="#thisWeekSelected" text="This Week" toggleGroup="$monthlyWeeklySelector" />
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
